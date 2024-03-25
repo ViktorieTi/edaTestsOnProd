@@ -11,7 +11,7 @@ test.beforeEach('open', async ({ page }) => {
 });
 
 // ПРОВЕРКА ВЫБОРА АДРЕСА НА КАТАЛОГЕ - также отдельно в файле addressChooseTests
-/*
+
 // При открытии каталога показывается попап с просьбой уточнить адрес
 test.beforeEach('enter address popup', async ({ page }) => {
     const addressPopup = await page.getByTestId("desktop-address-suggestion-root");
@@ -64,11 +64,10 @@ test.beforeEach("address suggestion list choose address", async ({ page }) => {
 
     await addressSelectWindow.getByTestId("address-input").fill("Недвиговка");
     await addressSelectWindow.locator("#react-autowhatever-1--item-0").click();
-    // await addressSelectWindow.getByTestId("react-autowhatever-1--item-0").click(); - не получилось найти по id, не знаю, почему
     await expect(addressSelectWindow.getByTestId("address-input")).toHaveValue("улица Ченцова, 48");
 });
 //при клике по кнопке "ок" закрывается окно с полем ввода адреса и отображается каталог для введенного адреса
-test("address suggestion list ok click", async ({ page }) => {
+test.beforeEach("address suggestion list ok click", async ({ page }) => {
     const addressSelectWindow = await page.getByTestId('desktop-location-modal-root');
 
     await addressSelectWindow.getByTestId("desktop-location-modal-confirm-button").click();
@@ -76,8 +75,8 @@ test("address suggestion list ok click", async ({ page }) => {
     console.log('Окно выбора адреса скрылось');
     await expect(page.getByTestId("address-button-root")).toContainText("улица Ченцова");
 });
-*/
 
+/*
 //ВЫЖИМКА ИЗ ПРЕДЫДУЩИХ СТРОК - выбор адреса
 test.beforeEach('address choose all steps', async ({ page }) => {
 
@@ -88,9 +87,10 @@ test.beforeEach('address choose all steps', async ({ page }) => {
 
     await expect(page.getByTestId("address-button-root")).toContainText("улица Ченцова");
 });
+*/
 
 //ВЫБОР НОВОГО АДРЕСА - - также отдельно в файле addressReChooseTests
-/*
+
 //открытие на каталоге попапа со списком адресов при клике по кнопке с выбранным адресом
 test.beforeEach('address list popup', async ({ page }) => {
     const addressButton = await page.getByTestId("address-button-root").getByRole('button');
@@ -131,8 +131,8 @@ test('address re-choose', async ({ page }) => {
 
     await expect(page.getByTestId("address-button-root")).toContainText("Привокзальная площадь, 1/2");
 });
- */
 
+/*
 //ВЫЖИМКА ИЗ ПРЕДЫДУЩИХ СТРОК - выбор нового адреса
 test.beforeEach('address re-choose all steps', async ({ page }) => {
 
@@ -144,17 +144,19 @@ test.beforeEach('address re-choose all steps', async ({ page }) => {
 
     await expect(page.getByTestId("address-button-root")).toContainText("Привокзальная площадь, 1/2");
 });
+*/
+
 
 //ПОИСК РЕСТОРАНА
-
 //отображение строки поиска на каталоге
-test.beforeEach('search line', async ({ page }) => {
+test('search line', async ({ page }) => {
     const searchLine = await page.getByTestId("new-header-root").getByTestId('search-input');
 
     await expect(page.getByTestId("new-header-root").getByRole('button', { name: 'Найти' })).toBeVisible();
     await expect(searchLine).toHaveAttribute("placeholder", "Найти ресторан, блюдо или товар");
-    //хочу найти элемент по классу - пока не нашла, как
+    //хочу найти элемент по классу - пока не нашла, как - upd добавлю по СSS
 });
+
 /*
 //при клике по строке поиска плейсхолдер не отображается - действительно не отображается, но через поиск по плейсхолдеру элемент находится
 test('search line placeholder', async ({ page }) => {
@@ -166,12 +168,14 @@ test('search line placeholder', async ({ page }) => {
  */
 
 /*
-далее еще буду набрасывать проверки
+// тут пока не сильно работающие тесты
+//далее еще буду набрасывать проверки
 //при вводе текста в строку поиска появляется список с предложениями и кнопка очистки "Х" поля ввода текста
 test.beforeEach('search line suggestion list', async ({ page }) => {
     await page.getByTestId("new-header-root").getByTestId('search-input').click();
     await page.getByTestId("new-header-root").getByTestId('search-input').fill("вкуснолюбов ");
 
+   //!!!! await expect(page.getByTestId("new-header-root").getElementsByClassName("b"))
     //прописать проверку появления списка предложений
     await expect(page.getByTestId("new-header-root").getByTestId('search-input').getByTestId('input-clear-button')).toBeVisible();
 });
@@ -182,5 +186,10 @@ test('search line clear button', async ({ page }) => {
     await expect(page.getByTestId("suggestionsList")).not.toBeVisible();
     await expect(page.getByTestId("new-header-root").getByTestId('search-input').getByTestId('input-clear-button')).not.toBeVisible();
 });
+*/
 
+/*
+вопросы по итогу работы:
+как искать по индексу
+как искать по классу
  */
