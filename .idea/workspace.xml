@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f3bef985-7c8a-4f28-a7df-192dc3c07b28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playwright-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/playwright-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/example.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/example.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,11 @@
       <list>
         <option value="ViktorieTi &lt;baranovavt@my.msu.ru&gt;" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="2.0" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -55,7 +62,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -79,6 +86,8 @@
       <workItem from="1711296336645" duration="28033000" />
       <workItem from="1711376761130" duration="345000" />
       <workItem from="1711379668954" duration="686000" />
+      <workItem from="1711380640794" duration="14813000" />
+      <workItem from="1711639636661" duration="18706000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1711293840747</created>
@@ -108,16 +117,49 @@
       <option name="project" value="LOCAL" />
       <updated>1711379780942</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="добавлены тесты на добавление адреса&#10;добавлены тесты на смену адреса&#10;в процессе написание тестов на строку поиска">
+      <created>1711380659114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711380659114</updated>
+    </task>
+    <task id="LOCAL-00006" summary="добавлены тесты на добавление адреса&#10;добавлены тесты на смену адреса&#10;в процессе написание тестов на строку поиска">
+      <created>1711380818358</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711380818358</updated>
+    </task>
+    <task id="LOCAL-00007" summary="поправила один момент">
+      <created>1711381023910</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711381023910</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="добавлены тесты на добавление адреса&#10;добавлены тесты на смену адреса&#10;в процессе написание тестов на строку поиска" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлены тесты на добавление адреса&#10;добавлены тесты на смену адреса&#10;в процессе написание тестов на строку поиска" />
+    <MESSAGE value="поправила один момент" />
+    <option name="LAST_COMMIT_MESSAGE" value="поправила один момент" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
