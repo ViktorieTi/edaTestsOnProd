@@ -1,5 +1,4 @@
 import { test, expect, Page} from '@playwright/test';
-import exp = require("constants");
 
 test.beforeEach('open', async ({ page, context }) => {
     const logo = await page.getByTestId('new-header-logo')
@@ -99,7 +98,7 @@ test.only('выбор нового адреса',async ({ page }) => {
     const addressListPopupChosenAddress = await page.getByTestId("desktop-popup-list-item").getByText("Дорожная улица, 1к1")
     const addressSelectWindow = await page.getByTestId('desktop-location-modal-root')
     const addressInput = await page.getByPlaceholder('Введите улицу и дом')
-    const popupAddressChooseButton = await page.getByTestId('desktop-address-suggestion-select-button')
+    // const popupAddressChooseButton = await page.getByTestId('desktop-address-suggestion-select-button')
 
     // async function addressChoose (Page) {
     //     const popupChooseAddressButton = await page.getByTestId('desktop-address-suggestion-select-button')
